@@ -1,19 +1,22 @@
 import pytest
-from src.project import area_cuadrado
+from src.project import cuadrado_area
 
-def test_calculate_area_square():
-    assert area_cuadrado(2) == 4
-    assert area_cuadrado(2.5) == 6.25
-
-def test_calculate_area_square_negative():
+def test_cuadrado_area():
+    assert cuadrado_area(3) == 9
+    assert cuadrado_area(4) == 16
+    assert cuadrado_area(8.4) == 70.56
+    
+def test_cuadrado_area_string():
     with pytest.raises(TypeError):
-        area_cuadrado(-2)
+        cuadrado_area("56")
 
-def test_calculate_area_square_string():
-    with pytest.raises(TypeError):
-        area_cuadrado("2")
 
-def test_calculate_area_square_list():
+def test_cuadrado_area_list():
     with pytest.raises(TypeError):
-        area_cuadrado([2])
-        
+        cuadrado_area([43])
+
+def test_cuadrado_area_negative():
+    with pytest.raises(TypeError):
+        cuadrado_area(-7)
+
+
