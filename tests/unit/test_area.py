@@ -11,7 +11,7 @@ def test_area_cuadrado_string():
         area_cuadrado("56")
 
 
-def test_cuadrado_area_list():
+def test_area_cuadrado_list():
     with pytest.raises(TypeError):
         area_cuadrado([43])
 
